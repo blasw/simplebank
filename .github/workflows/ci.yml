@@ -21,7 +21,6 @@ jobs:
           POSTGRES_PASSWORD: secret
           POSTGRES_USER: root
           POSTGRES_DB: simple_bank
-          POSTGRES_HOST: 172.29.46.53
         ports:
           - 5432:5432
         options: >-
@@ -47,7 +46,7 @@ jobs:
           which migrate
 
       - name: Run migrations
-        run: make migrateup
+        run: make workflowMigrateup
 
       # - name: Build
       #   run: go build -v ./...
