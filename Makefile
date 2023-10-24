@@ -14,10 +14,10 @@ migratedown:
 	migrate -path db/migration -database "postgresql://root:secret@172.29.46.53:5432/simple_bank?sslmode=disable" -verbose down
 
 workflowMigrateup:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose up
+	migrate -path db/migration -database "postgresql://root:secret@0.0.0.0:5432/simple_bank?sslmode=disable" -verbose up
 
 workflowMigratedown:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose down
+	migrate -path db/migration -database "postgresql://root:secret@0.0.0.0:5432/simple_bank?sslmode=disable" -verbose down
 
 sqlc:
 	sqlc generate
